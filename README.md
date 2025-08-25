@@ -2,7 +2,7 @@
 
 
 ## What this project contains
-- Notebooks: `claude.ipynb`, `implementation code.ipynb` — main pipeline implementations and experiments.
+- Notebooks: `implementation code.ipynb` — main pipeline implementations and experiments.
 - Scripts: `serial.py`, `parallel.py`, `gpu.py` — helper/alternate implementations.
 - Dataset: `pdc_dataset_with_target.csv` (placed in the project root).
 
@@ -33,11 +33,10 @@ This README is written to be GitHub-friendly and generic so you can upload the r
 
 ## Repository structure
 
-- `claude.ipynb` — primary pipeline notebook (data loading, preprocessing, training modes).
-- `implementation code.ipynb` — additional experiments and implementation notes.
+- `implementation code.ipynb` — primary pipeline notebook (data loading, preprocessing, training modes).
 - `serial.py`, `parallel.py`, `gpu.py` — script variants / helpers (if present in the repo).
 - `pdc_dataset_with_target.csv` — dataset (place in repository root or provide a full path).
-- Slides / reports: presentation and performance report files used for the course.
+-  reports: performance report files used for the course.
 
 Note: file names may vary slightly; open the project root to verify exact filenames.
 
@@ -79,7 +78,7 @@ Run the notebook as a script (optional):
 
 ```powershell
 jupyter nbconvert --to script claude.ipynb
-python claude.py --data "pdc_dataset_with_target.csv" --all
+python `implementation code.ipynb` --data "pdc_dataset_with_target.csv" --all
 ```
 
 Or run the helper scripts (if included):
@@ -105,4 +104,5 @@ python gpu.py
 
 - `argparse` errors when running inside notebooks:
   - Notebooks don't receive CLI arguments by default. The primary notebook includes a default path so it runs interactively. When converting to a script, provide `--data` if your dataset is outside the repo root.
+
 
