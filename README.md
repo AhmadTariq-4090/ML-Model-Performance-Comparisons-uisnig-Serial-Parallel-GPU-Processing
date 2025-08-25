@@ -77,8 +77,8 @@ The primary notebook is `claude.ipynb`. It accepts a `--data` CLI argument when 
 Run the notebook as a script (optional):
 
 ```powershell
-jupyter nbconvert --to script claude.ipynb
-python `implementation code.ipynb` --data "pdc_dataset_with_target.csv" --all
+jupyter nbconvert --to script implementation code.ipynb
+python implementation code.py --data "pdc_dataset_with_target.csv" --all
 ```
 
 Or run the helper scripts (if included):
@@ -104,5 +104,6 @@ python gpu.py
 
 - `argparse` errors when running inside notebooks:
   - Notebooks don't receive CLI arguments by default. The primary notebook includes a default path so it runs interactively. When converting to a script, provide `--data` if your dataset is outside the repo root.
+
 
 
